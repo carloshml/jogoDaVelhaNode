@@ -1,0 +1,73 @@
+.quadrado{
+    float: left;
+    width: 33%;
+    height: 100px;      
+}
+
+.btn{
+    border:none;
+    background: linear-gradient(346deg, #fdcd3b 60%, #ffed4b 60%);
+}
+
+.dentro-quadrado{
+    background-color: rgb(52, 67, 85); 
+    margin: 10px;   
+    height: calc(100% - 10px);  
+    color: white;
+    border-radius: 4px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.mensagem{  
+    height: 40px; 
+    padding: 5px;  
+    color: white;
+    border-radius: 4px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.mensagem-cor{
+    background-color: rgb(248, 0, 21); 
+}
+
+.jogador-cor{
+    background-color: rgb(0, 178, 248);     
+} 
+
+.game{
+    background-color: rgb(24, 35, 49);  
+    height: 310px;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .game{    
+        margin: 50px 5%;
+    }
+
+    .mensagem{  
+        margin: 2px 5%;
+    }
+}
+
+@media (min-width: 601px)  and  (max-width: 1100px){
+    .game{     
+        margin: 50px 25%;
+    }
+
+    .mensagem{ 
+        margin: 2px 25%;
+    }
+}
+
+@media (min-width: 1101px)  {
+    .game{     
+        margin: 50px 30%;
+    }
+
+    .mensagem{ 
+        margin: 2px 30%;
+    }
+}

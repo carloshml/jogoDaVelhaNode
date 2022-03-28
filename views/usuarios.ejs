@@ -1,0 +1,39 @@
+<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> Lista de Usuários </title>
+    <link rel="stylesheet" href="style.scss">
+</head>
+
+<body class="body-index">
+    <menu class="alinhar-texto">
+        <strong class="white-text">UM ESTUDO</strong>
+    </menu>
+    <section class="section-index">
+        <h1> Lista de Usuários </h1>
+        <section class="container row blue white-text">
+            <div class="item  "> NOME </div>
+            <div class="item  ">Descrição</div>
+            <div class="item  ">Idade</div>
+        </section>
+        <section class=" ">
+            <% for (const usuario of usuarios) { %>
+                <div class="container row">
+                    <div class="item">
+                        <%= usuario.nome %>
+                    </div>
+                    <div class="item">
+                        <%= usuario.descricao %>
+                    </div>
+                    <div class="item">
+                        <%= usuario.idade %>
+                    </div>
+                </div>
+                <% } %>
+        </section>
+    </section>
+</body>
+
+
+</html>

@@ -1,0 +1,112 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+a{ 
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+menu{
+    background-color: rgba(161, 5, 5, 0.767);
+    padding: 5px;
+}
+
+input{
+    height: 24px;
+    border: 1px solid  gray;
+}
+
+/* Flex Container */
+.container {
+	max-width: 90%;
+	margin: 0 auto;
+	display: flex;
+}
+
+.row {
+	flex-direction: row;
+}
+
+.body-index{
+  background-color: gray;
+}
+
+.section-index{
+   border-radius: 4px;
+   background-color: white;
+   margin: 2px 20px;
+   padding: 10px;
+   height: calc( 100vh - 5em);
+}
+
+.item {
+	/* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+	flex: 1;
+	margin: 5px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.btn{
+  border: none;
+  background-color: steelblue;
+  color: wheat;
+  border-radius: 4px;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 2px 0;
+}
+
+.row:nth-child(odd) {
+    background: rgb(221, 221, 221)
+}
+
+.alinhar-texto{
+    text-align: center;
+}
+
+.white-text{
+    color: white;
+}
+
+.blue{
+    background-color: rgb(0, 178, 248);     
+} 
+
+@media (max-width: 600px) {
+    .game{    
+        margin: 50px 5%;
+    }
+
+    .mensagem{  
+        margin: 2px 5%;
+    }
+}
+
+@media (min-width: 601px)  and  (max-width: 1100px){
+    .game{     
+        margin: 50px 25%;
+    }
+
+    .mensagem{ 
+        margin: 2px 25%;
+    }
+}
+
+@media (min-width: 1101px)  {
+    .game{     
+        margin: 50px 30%;
+    }
+
+    .mensagem{ 
+        margin: 2px 30%;
+    }
+}

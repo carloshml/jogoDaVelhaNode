@@ -1,0 +1,31 @@
+<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> jogo Da Velha </title>
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="views/jogoDaVelha/jogoDaVelha.css">
+    <script src="views/jogoDaVelha/jogoDaVelha.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            jogoDaVelha.init(document.querySelector('#game'));
+            jogoDaVelha.draw();
+        });
+    </script>
+</head>
+
+<body class="body-index">
+    <menu class="alinhar-texto">
+        <strong class="white-text">UM ESTUDO</strong>
+    </menu>
+    <section class="section-index">
+        <div style="text-align: center; ">
+            <button id="jogar-de-novo" class="btn mensagem" onclick="jogoDaVelha.jogarDeNovo()" style="display: none;">
+                JOGAR DE NOVO
+            </button>
+        </div>
+        <div id="game"> </div>
+    </section>
+</body>
+
+</html>

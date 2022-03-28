@@ -1,0 +1,91 @@
+<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> formulário </title>
+    <link rel="stylesheet" href="style.scss">
+
+    <script>
+
+        const obterDadosFOrmulario = function (elementoForm) {
+            let elementEnvio = {};
+            if (elementoForm) {
+                const a = elementoForm.querySelectorAll('input');
+
+                a.forEach(element => {
+                    elementEnvio[element.id] = element.value;
+                });
+            }
+            return elementEnvio;
+        }
+
+        const mostrarForm = function () {
+            const elementEnvio = obterDadosFOrmulario(document.getElementById('formulario-principal'));
+
+           
+            fetch('http://localhost:3000/formulario',
+                {
+                    method: "POST",
+                    body: JSON.stringify(elementEnvio),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                })
+                .then(function (response) {
+                    const contentType = response.headers.get("content-type");
+                    if (contentType && (contentType.indexOf("application/json") !== -1)) {
+                        return response
+                            .json()
+                            .then(function (json) {
+                                // process your JSON further
+                                console.log(" RIGHT ", json);
+                                alert(' cadastrado com sucesso');
+                                window.location = 'http://localhost:3000/';
+
+                            });
+                    } else {
+                        alert(' Deu erro ');
+                        console.log("Oops, we haven't got JSON!");
+                    }
+                })
+                .catch(e => {
+                    alert(' Deu erro 500');
+                    console.log("Oops, we haven't got JSON!");
+                });
+        }
+    </script>
+</head>
+
+<body class="body-index">
+    <menu class="alinhar-texto">
+        <strong class="white-text">UM ESTUDO</strong>
+    </menu>
+    <section class="section-index">
+        <h1> Cadastro de Usuários </h1>
+        <form id="formulario-principal">
+            <div>
+                <div>
+                    <label for="">Nome</label>
+                </div>
+                <input id="nome" class="input" type="text">
+            </div>
+            <div>
+                <div>
+                    <label for="">Descricão</label>
+                </div>
+                <input id="descricao" class="input" type="text">
+            </div>
+            <div>
+                <div>
+                    <label for="">Idade</label>
+                </div>
+                <input id="idade" class="input" type="number">
+            </div>
+            <button class="btn" type="button" onclick="mostrarForm()">
+                enviar
+            </button>
+        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title> Minha página </title>
+  <link rel="stylesheet" href="style.scss">
+</head>
+
+<body class="body-index">
+  <menu class="alinhar-texto">
+    <strong class="white-text">UM ESTUDO</strong>
+  </menu>
+  <section class="section-index">
+    <h1> Que tal jogar um jogo?</h1>
+    <ul>
+      <% for(var i=0; i<urls.length; i++) {%>
+        <div class="alinhar-texto">
+          <a href="<%= urls[i].url %>">
+            <%= urls[i].nome %>
+          </a>
+        </div>
+        <% } %>
+    </ul>
+  </section>
+</body>
+
+</html>
