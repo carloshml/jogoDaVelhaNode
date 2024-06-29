@@ -80,33 +80,3 @@ input{
 .blue{
     background-color: rgb(0, 178, 248);     
 } 
-
-@media (max-width: 600px) {
-    .game{    
-        margin: 50px 5%;
-    }
-
-    .mensagem{  
-        margin: 2px 5%;
-    }
-}
-
-@media (min-width: 601px)  and  (max-width: 1100px){
-    .game{     
-        margin: 50px 25%;
-    }
-
-    .mensagem{ 
-        margin: 2px 25%;
-    }
-}
-
-@media (min-width: 1101px)  {
-    .game{     
-        margin: 50px 30%;
-    }
-
-    .mensagem{ 
-        margin: 2px 30%;
-    }
-}
