@@ -1,73 +1,68 @@
-.quadrado{
-    float: left;
-    width: 33%;
-    height: 100px;      
-}
-
-.btn{
-    border:none;
+.btn {
+    border: none;
     background: linear-gradient(346deg, #fdcd3b 60%, #ffed4b 60%);
 }
 
-.dentro-quadrado{
-    background-color: rgb(52, 67, 85); 
-    margin: 10px;   
-    height: calc(100% - 10px);  
+
+.mensagem {
+    height: 40px;
+    padding: 5px;
     color: white;
     border-radius: 4px;
-    font-size: 30px;
-    text-align: center;
+    font-size: 30px;  
+    font-weight: bold;
+    justify-content: center;
 }
 
-.mensagem{  
-    height: 40px; 
-    padding: 5px;  
+.mensagem-cor {
+    background-color: rgb(248, 0, 21);
+}
+
+.jogador-cor {
+    background-color: rgb(0, 178, 248);
+}
+
+.game-space{  
+    display: flex;
+    width: 100%; 
+    align-items: center;
+    flex-direction: column;     
+}
+
+.game-space  > * {  
+    margin: 6px 0;    
+}
+
+
+.game, .mensagem{
+    display: flex;
+    width: 486px;
+}
+
+.game {
+    background-color: rgb(24, 35, 49);
+    align-content: center;      
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.local-jogada {
+    display: flex;
+    width: 150px;
+    height: 150px;    
+    padding: 6px;   
+}
+
+.local-jogada span {
+    font-weight: bold;
     color: white;
-    border-radius: 4px;
-    font-size: 30px;
-    text-align: center;
-}
-
-.mensagem-cor{
-    background-color: rgb(248, 0, 21); 
-}
-
-.jogador-cor{
-    background-color: rgb(0, 178, 248);     
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gray;
+    height: 100%;
+    width: 100%;
+    border-radius: 13px;
 } 
-
-.game{
-    background-color: rgb(24, 35, 49);  
-    height: 310px;
-    border-radius: 6px;
-}
-
-@media (max-width: 600px) {
-    .game{    
-        margin: 50px 5%;
-    }
-
-    .mensagem{  
-        margin: 2px 5%;
-    }
-}
-
-@media (min-width: 601px)  and  (max-width: 1100px){
-    .game{     
-        margin: 50px 25%;
-    }
-
-    .mensagem{ 
-        margin: 2px 25%;
-    }
-}
-
-@media (min-width: 1101px)  {
-    .game{     
-        margin: 50px 30%;
-    }
-
-    .mensagem{ 
-        margin: 2px 30%;
-    }
-}
