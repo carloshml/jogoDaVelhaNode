@@ -10,16 +10,21 @@
         document.addEventListener('DOMContentLoaded', (event) => {
             jogoDaVelha.init(document.querySelector('#game'));
             jogoDaVelha.draw();
+            jogoDaVelha.jogadores = JSON.parse(document.getElementById('jogadores').value);
+            console.log(' jogoDaVelha.jogadores ', jogoDaVelha.jogadores);
         });
     </script>
 </head>
 
 <body class="body-index">
+    <input id="jogadores" type="hidden" value="<%=JSON.stringify(dados)%>">
     <menu class="alinhar-texto">
-        <strong class="white-text">UM ESTUDO</strong>
+        <strong class="white-text">JOGO DA VELHA</strong>
     </menu>
     <section class="section-index">
-        <div class="game-space" >
+
+        <div class="game-space">
+            <button id='mensagens' class="mensagem mensagem-cor" style="display: none;"> </button>
             <button id="jogar-de-novo" class="btn mensagem" onclick="jogoDaVelha.jogarDeNovo()" style="display: none;">
                 JOGAR DE NOVO
             </button>

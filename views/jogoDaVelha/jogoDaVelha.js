@@ -1,5 +1,6 @@
 const jogoDaVelha = {
     tabuleiro: ['', '', '', '', '', '', '', '', ''],
+    jogadores:{},
     simbolos: {
         opcoes: ['X', 'O'],
         jogador: 1,
@@ -31,16 +32,11 @@ const jogoDaVelha = {
         // ------------- jogador ----------------
         const jogador = document.createElement('div');
         jogador.id = 'jogador';
-        jogador.innerHTML = ` É a vez do <strong>${this.simbolos.opcoes[this.simbolos.jogador === 1 ? 0 : 1]} </strong> jogar `;
+        jogador.innerHTML = `<strong>${this.jogadores[this.simbolos.jogador === 1 ? 'jogador-x' : 'jogador-o']} </strong>  joga`;
         jogador.classList.add('mensagem');
         jogador.classList.add('jogador-cor');
         this.container_element.appendChild(jogador);
-        // ------------- mesangem ----------------
-        const mensagem = document.createElement('div');
-        mensagem.id = 'mensagens';
-        mensagem.classList.add('mensagem');
-        mensagem.classList.add('mensagem-cor');
-        this.container_element.appendChild(mensagem);
+      
     },
     jogar: function (posicao) {
         if (this.game_over) {
@@ -82,17 +78,21 @@ const jogoDaVelha = {
         if (ninguemVenceu) {
             this.notificar(` Ninguém venceu, joguem novamente !!!`, 25000);
         } else {
-            this.notificar(`${this.simbolos.opcoes[this.simbolos.jogador]} Venceu 🎉🎉🥳🎉🎈🎈🎈 !!!`, 25000);
+            this.notificar(`${this.jogadores[this.simbolos.jogador === 1 ? 'jogador-x' : 'jogador-o']} Venceu 🎉🎉🥳🎉🎈🎈🎈 !!!`, 25000);
         }
         this.game_over = true;
         this.tabuleiro = ['', '', '', '', '', '', '', '', ''];
         const botaoJogarDeNovo = document.getElementById('jogar-de-novo');
         botaoJogarDeNovo.style.display = 'flex';
+        const mensagemDiv = document.getElementById('mensagens');
+        mensagemDiv.style.display = 'flex';
     },
     jogarDeNovo: function () {
         this.game_over = false;
         const botaoJogarDeNovo = document.getElementById('jogar-de-novo');
         botaoJogarDeNovo.style.display = 'none';
+        const mensagemDiv = document.getElementById('mensagens');
+        mensagemDiv.style.display = 'none';
         jogoDaVelha.draw();
     },
     notificar: function (mensagem, tempo) {

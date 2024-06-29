@@ -10,5 +10,5 @@ module.exports = function (app) {
             extended: true
         }))
         .use(express.json());
-    require('./routes')(app);
+    require('./routes/routes')(app);
 }

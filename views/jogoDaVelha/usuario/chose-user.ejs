@@ -1,0 +1,53 @@
+<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> Lista de Usuários </title>
+    <link rel="stylesheet" href="style.scss">
+</head>
+
+<body class="body-index">
+    <menu class="alinhar-texto">
+        <strong class="white-text">Jogo da Velha</strong>
+    </menu>
+    <form id="form" method="post" action="jogoDaVelha">
+        <section class="section-index">
+            <h1> Selecione usuario </h1>
+            <div>
+                <span> jogador X </span>
+                <div class="form-group"> 
+                    <select  name="jogador-x" id="jogador-x">
+                        <option value="desconhecido">desconhecido</option>
+                        <option value="desconhecido2">desconhecido 2</option>
+                        <% for (const usuario of usuarios) { %>
+                            <option value="<%= usuario.nome %>">
+                                <%= usuario.nome %>
+                            </option>
+                            <% } %>
+                    </select>
+                </div>
+
+            </div>
+            <div>
+                <span> jogador O </span>
+                <div class="form-group">
+                    <select   name="jogador-o" id="jogador-o">
+                        <option value="desconhecido">desconhecido</option>
+                        <option value="desconhecido2">desconhecido 2</option>
+                        <% for (const usuario of usuarios) { %>
+                            <option value="<%= usuario.nome %>">
+                                <%= usuario.nome %>
+                            </option>
+                            <% } %>
+                    </select>
+                </div>
+
+            </div>
+            <div>
+                <button class="btn" type="submit"> jogar </button>
+            </div>
+        </section>
+    </form>
+</body>
+
+</html>
