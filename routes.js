@@ -6,29 +6,30 @@ module.exports = function (app) {
             nome: 'Jogo da Velha'
         },
         {
-            url: 'formulario',
+            url: 'create-user',
             nome: 'Cadastrar Usuário'
         },
         {
-            url: 'usuarios',
+            url: 'read-users',
             nome: 'Ver Usuários'
         },
     ];
 
-    const usuarios = [ ];
+    const usuarios = [];
     // ---- rotas --------------
     app.get('/', (req, res) => {
         res.render('index', { urls });
     });
-    app.get('/usuarios', (req, res) => {
-        res.render('usuarios', { usuarios });
-    });
     app.get('/jogoDaVelha', (req, res) => {
         res.render('jogoDaVelha/jogoDaVelha');
     });
-    app.get('/formulario', (req, res) => {
-        res.render('formulario/formulario');
+    app.get('/read-users', (req, res) => {
+        res.render('jogoDaVelha/usuario/read-users', { usuarios });
+    }); 
+    app.get('/create-user', (req, res) => {
+        res.render('jogoDaVelha/usuario/create-user');
     });
+
     app.post('/formulario', (req, res) => {
         // pode usar esses dados para salvar algo; 
         console.log('  req.body   ', req.body);
