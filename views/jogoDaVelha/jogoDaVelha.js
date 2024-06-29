@@ -25,13 +25,13 @@ const jogoDaVelha = {
     draw: function () {
         let conteudo = '';
         for (i in this.tabuleiro) {
-            conteudo += `<div class='quadrado' onclick="jogoDaVelha.jogar(${i})"><div class='dentro-quadrado'>${this.tabuleiro[i]}</div></div>`;
+            conteudo += `<div class='local-jogada' onclick="jogoDaVelha.jogar(${i})"><span> ${this.tabuleiro[i]} </span></div>`;
         }
         this.container_element.innerHTML = `<div class="game">${conteudo}</div>`;
         // ------------- jogador ----------------
         const jogador = document.createElement('div');
         jogador.id = 'jogador';
-        jogador.innerHTML = ` É a vez do <strong>${this.simbolos.opcoes[this.simbolos.jogador === 1 ? 0 : 1]} </strong> jogar `;;
+        jogador.innerHTML = ` É a vez do <strong>${this.simbolos.opcoes[this.simbolos.jogador === 1 ? 0 : 1]} </strong> jogar `;
         jogador.classList.add('mensagem');
         jogador.classList.add('jogador-cor');
         this.container_element.appendChild(jogador);
@@ -80,14 +80,14 @@ const jogoDaVelha = {
     },
     notificarGameOver: function (ninguemVenceu) {
         if (ninguemVenceu) {
-            this.notificar(` Ningúem venceu, joguem novamente !!!`, 25000);
+            this.notificar(` Ninguém venceu, joguem novamente !!!`, 25000);
         } else {
             this.notificar(`${this.simbolos.opcoes[this.simbolos.jogador]} Venceu 🎉🎉🥳🎉🎈🎈🎈 !!!`, 25000);
         }
         this.game_over = true;
         this.tabuleiro = ['', '', '', '', '', '', '', '', ''];
         const botaoJogarDeNovo = document.getElementById('jogar-de-novo');
-        botaoJogarDeNovo.style.display = 'initial';
+        botaoJogarDeNovo.style.display = 'flex';
     },
     jogarDeNovo: function () {
         this.game_over = false;
