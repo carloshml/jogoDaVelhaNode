@@ -78,7 +78,7 @@ const jogoDaVelha = {
         if (ninguemVenceu) {
             this.notificar(` Ninguém venceu, joguem novamente !!!`, 25000);
         } else {
-            this.notificar(`${this.jogadores[this.simbolos.jogador === 1 ? 'jogador-x' : 'jogador-o']} Venceu 🎉🎉🥳🎉🎈🎈🎈 !!!`, 25000);
+            this.notificar(`${this.jogadores[this.simbolos.jogador === 1 ? 'jogador-o' :  'jogador-x' ]} Venceu 🎉🎉🥳🎉🎈🎈🎈 !!!`, 25000);
         }
         this.game_over = true;
         this.tabuleiro = ['', '', '', '', '', '', '', '', ''];

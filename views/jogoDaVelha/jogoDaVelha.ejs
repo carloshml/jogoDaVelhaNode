@@ -8,10 +8,9 @@
     <script src="views/jogoDaVelha/jogoDaVelha.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            jogoDaVelha.init(document.querySelector('#game'));
-            jogoDaVelha.draw();
+            jogoDaVelha.init(document.querySelector('#game'));            
             jogoDaVelha.jogadores = JSON.parse(document.getElementById('jogadores').value);
-            console.log(' jogoDaVelha.jogadores ', jogoDaVelha.jogadores);
+            jogoDaVelha.draw();
         });
     </script>
 </head>

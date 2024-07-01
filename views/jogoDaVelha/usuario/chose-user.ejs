@@ -12,13 +12,13 @@
     </menu>
     <form id="form" method="post" action="jogoDaVelha">
         <section class="section-index">
-            <h1> Selecione usuario </h1>
+            <h1> Selecione os Jogadores </h1>
             <div>
                 <span> jogador X </span>
                 <div class="form-group"> 
                     <select  name="jogador-x" id="jogador-x">
-                        <option value="desconhecido">desconhecido</option>
-                        <option value="desconhecido2">desconhecido 2</option>
+                        <option value="jogadorX">Jogador X</option>
+                        <option disabled value="null">Crie Novos Jogadores</option>
                         <% for (const usuario of usuarios) { %>
                             <option value="<%= usuario.nome %>">
                                 <%= usuario.nome %>
@@ -26,14 +26,13 @@
                             <% } %>
                     </select>
                 </div>
-
             </div>
             <div>
                 <span> jogador O </span>
                 <div class="form-group">
-                    <select   name="jogador-o" id="jogador-o">
-                        <option value="desconhecido">desconhecido</option>
-                        <option value="desconhecido2">desconhecido 2</option>
+                    <select name="jogador-o" id="jogador-o">
+                        <option value="jogadorO">Jogador O</option>
+                        <option disabled value="null">Crie Novos Jogadores</option>                  
                         <% for (const usuario of usuarios) { %>
                             <option value="<%= usuario.nome %>">
                                 <%= usuario.nome %>
