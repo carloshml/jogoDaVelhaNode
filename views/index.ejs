@@ -14,11 +14,11 @@
     <h1> Que tal jogar um jogo?</h1>
     <ul>
       <% for(var i=0; i<urls.length; i++) {%>
-        <div class="alinhar-texto">
+        <li class="alinhar-texto">
           <a href="<%= urls[i].url %>">
             <%= urls[i].nome %>
           </a>
-        </div>
+        </li>
         <% } %>
     </ul>
   </section>
