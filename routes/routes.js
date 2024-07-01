@@ -2,8 +2,12 @@ module.exports = function (app) {
 
     const urls = [
         {
-            url: 'chose-gamers',
+            url: 'chose-gamers-jogo-velha',
             nome: 'Jogo da Velha'
+        },
+        {
+            url: 'bingo',
+            nome: 'Bingo'
         },
         {
             url: 'create-gamer',
@@ -26,8 +30,8 @@ module.exports = function (app) {
         jogadores = { dados };
         res.render('jogoDaVelha/jogoDaVelha', jogadores);
     });
-    app.get('/chose-gamers', (req, res) => {
-        res.render('jogoDaVelha/usuario/chose-gamers', { usuarios });
+    app.get('/chose-gamers-jogo-velha', (req, res) => {
+        res.render('jogoDaVelha/chose-gamers', { usuarios });
     });
     app.get('/read-gamers', (req, res) => {
         res.render('jogoDaVelha/usuario/read-gamers', { usuarios });

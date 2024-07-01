@@ -9,9 +9,13 @@
     padding: 5px;
     color: white;
     border-radius: 4px;
-    font-size: 30px;  
+    font-size: 30px;
     font-weight: bold;
     justify-content: center;
+}
+
+.mensagem strong {
+    margin-right: 30px;
 }
 
 .mensagem-cor {
@@ -22,36 +26,37 @@
     background-color: rgb(0, 178, 248);
 }
 
-.game-space{  
+.game-space {
     display: flex;
-    width: 100%; 
+    width: 100%;
     align-items: center;
-    flex-direction: column;     
+    flex-direction: column;
 }
 
-.game-space  > * {  
-    margin: 6px 0;    
+.game-space>* {
+    margin: 6px 0;
 }
 
 
-.game, .mensagem{
+.game,
+.mensagem {
     display: flex;
     width: 486px;
 }
 
 .game {
     background-color: rgb(24, 35, 49);
-    align-content: center;      
+    align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    
+
 }
 
 .local-jogada {
     display: flex;
     width: 150px;
-    height: 150px;    
-    padding: 6px;   
+    height: 150px;
+    padding: 6px;
 }
 
 .local-jogada span {
@@ -65,4 +70,4 @@
     height: 100%;
     width: 100%;
     border-radius: 13px;
-} 
+}
