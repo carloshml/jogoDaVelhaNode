@@ -2,16 +2,16 @@ module.exports = function (app) {
 
     const urls = [
         {
-            url: 'chose-user',
+            url: 'chose-gamers',
             nome: 'Jogo da Velha'
         },
         {
-            url: 'create-user',
-            nome: 'Cadastrar Usuário'
+            url: 'create-gamer',
+            nome: 'Cadastrar Jogador'
         },
         {
-            url: 'read-users',
-            nome: 'Ver Usuários'
+            url: 'read-gamers',
+            nome: 'Ver Jogadores'
         },
     ];
 
@@ -26,14 +26,14 @@ module.exports = function (app) {
         jogadores = { dados };
         res.render('jogoDaVelha/jogoDaVelha', jogadores);
     });
-    app.get('/chose-user', (req, res) => {
-        res.render('jogoDaVelha/usuario/chose-user', { usuarios });
+    app.get('/chose-gamers', (req, res) => {
+        res.render('jogoDaVelha/usuario/chose-gamers', { usuarios });
     });
-    app.get('/read-users', (req, res) => {
-        res.render('jogoDaVelha/usuario/read-users', { usuarios });
+    app.get('/read-gamers', (req, res) => {
+        res.render('jogoDaVelha/usuario/read-gamers', { usuarios });
     });
-    app.get('/create-user', (req, res) => {
-        res.render('jogoDaVelha/usuario/create-user');
+    app.get('/create-gamer', (req, res) => {
+        res.render('jogoDaVelha/usuario/create-gamer');
     });
 
     app.post('/formulario', (req, res) => {
