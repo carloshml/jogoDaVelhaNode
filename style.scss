@@ -1,91 +1,114 @@
-*{
+* {
     font-family: 'Courier New', Courier, monospace;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
-li{
+li {
     list-style-type: none;
 }
 
-a{ 
+a {
     color: black;
     font-size: 16px;
     text-decoration: none;
 }
 
-menu{
+menu,
+nav {
     background-color: rgba(161, 5, 5, 0.767);
     padding: 5px;
 }
 
-input{
+input {
     height: 24px;
-    border: 1px solid  gray;
+    border: 1px solid gray;
 }
 
 /* Flex Container */
 .container {
-	max-width: 90%;
-	margin: 0 auto;
-	display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
 }
 
 .row {
-	flex-direction: row;
+    flex-direction: row;
 }
 
-.body-index{
-  background-color: gray;
+.body-index {
+    background-color: gray;
 }
 
-.section-index{
-   border-radius: 4px;
-   background-color: white;
-   margin: 2px 20px;
-   padding: 10px;
-   height: calc( 100vh - 5em);
-   display: flex;
-   align-items: center;
-   flex-direction: column;
+.section-index {
+    border-radius: 4px;
+    background-color: white;
+    margin: 2px 20px;
+    padding: 10px;
+    height: calc(100vh - 5em);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .item {
-	/* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
-	flex: 1;
-	margin: 5px;
-	text-align: center;
-	font-size: 1.5em;
+    /* O flex: 1; é necessário para que cada item se expanda ocupando o tamanho máximo do container. */
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.5em;
 }
 
-.btn{
-  border: none;
-  background-color: steelblue;
-  color: wheat;
-  border-radius: 4px;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin: 2px 0;
-  padding: 8px;
-  display: inline-block;
+.btn {
+    border: none;
+    background-color: steelblue;
+    color: wheat;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 2px 0;
+    padding: 8px;
+    display: inline-block;
 }
 
 .row:nth-child(odd) {
     background: rgb(221, 221, 221)
 }
 
-.alinhar-texto{
+.alinhar-texto {
     text-align: center;
 }
 
-.white-text{
+.white-text {
     color: white;
 }
 
-.blue{
-    background-color: rgb(0, 178, 248);     
-} 
+.blue {
+    background-color: rgb(0, 178, 248);
+}
+
+.lista-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    padding: 10px;
+    border-radius: 11px;
+    box-shadow: 2px 5px 6px red;
+    margin: 11;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.menu-item a {
+    font-weight: bold;
+}

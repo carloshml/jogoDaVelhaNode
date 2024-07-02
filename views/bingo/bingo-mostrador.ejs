@@ -1,0 +1,55 @@
+<html lang="pt-br" xml:lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" type="image/x-icon" href="/assets/imagens/favicon.ico">
+    <title> jogo Da Velha </title>
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="views/bingo/bingo.css">
+    <script src="views/bingo/bingo.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            setInterval(async () => {
+
+                const numerosSorteados = await getTableBingo();
+
+                for (const numero of numerosSorteados) {
+                    adicionarValorNoFinal(numero);      
+                }
+
+            }, 1000);
+        });
+    </script>
+</head>
+
+<body class="body-index">
+    <nav class="alinhar-texto">
+        <strong class="white-text">Bingo</strong>
+    </nav>
+    <div class="section-index">
+         
+        <section>
+            <table id="table-bingo">
+                <tr>
+                    <th id="th-b">B</th>
+                </tr>
+                <tr>
+                    <th id="th-i">I</th>
+                </tr>
+                <tr>
+                    <th id="th-n">N</th>
+                </tr>
+                <tr>
+                    <th id="th-g">G</th>
+                </tr>
+                <tr>
+                    <th id="th-o">O</th>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+</body>
+
+
+</html>

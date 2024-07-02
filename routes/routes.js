@@ -20,10 +20,30 @@ module.exports = function (app) {
     ];
 
     const usuarios = [];
+    let valores = [];
     let jogadores;
+
     // ---- rotas --------------
     app.get('/', (req, res) => {
         res.render('index', { urls });
+    });
+    app.get('/bingo', (req, res) => {
+        res.render('bingo/bingo');
+    });
+
+    app.post('/bingo/valores', (req, res) => {
+        valores = req.body;
+        res.end(JSON.stringify(valores));
+    });
+    app.get('/bingo/valores', (req, res) => {
+        res.end(JSON.stringify(valores));
+    });
+
+    app.get('/bingo-mostrador', (req, res) => {
+        res.render('bingo/bingo-mostrador');
+    });
+    app.get('/bingo-sortear', (req, res) => {
+        res.render('bingo/bingo-sortear');
     });
     app.post('/jogoDaVelha', (req, res) => {
         const dados = req.body;
